@@ -1,3 +1,17 @@
+/*
+    Outputs the number of nodes in the five biggest strongly
+    connected components of a graph. In this case, the number 
+    of nodes was 875714, loaded into a linked list from a text
+    file named "SCC.txt" with each line containing one node, 
+    ie ( a b ) -> (a,b). Load() implemented with DFS in mind so 
+    it automatically uploads reverse graph. rLoad() then reverses 
+    it to get original. 
+    
+    Run time was 31 seconds on a computer with specs:
+    Windows, 4gb RAM, i3, 64 bit OS, 2.00 GHz
+    Stack size: 32 mb
+*/
+
 #include "std_lib_facilities.h"
 
 //Number of nodes of graph
