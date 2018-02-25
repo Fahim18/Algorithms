@@ -227,6 +227,7 @@ void delete_graph(Node ** head) {
 //delete linked list connected to each head pointer
 void delete_list(Node * head) {
     if(head->next != nullptr) delete_list(head->next);
+    head->next = nullptr;
     delete head;
     head = nullptr;
 }
