@@ -13,7 +13,7 @@
 
 using namespace std;
 
-int number_of_nodes = 200; //Initialize to number of nodes in graph
+constexpr int number_of_nodes = 200; //Initialize to number of nodes in graph
 int number_of_connected_nodes = 0;
 
 struct Node {
@@ -247,8 +247,8 @@ void _bubble_up(vector<int> &heap, int index, int * node_index, int * index_node
 
 void _bubble_down(vector<int> &heap, int index, int * node_index, int * index_node) {
 
-    if((2*index + 1) > (heap.size() - 1) && (2*index + 2) > (heap.size() - 1)) return;
-    if((2*index + 1) == (heap.size() - 1) && (2*index + 2) > (heap.size() - 1)) {
+    if((2*index + 1) > (heap.size() - 1)) return;
+    if((2*index + 1) == (heap.size() - 1)) {
         int child_dist = heap[2*index + 1];
         int parent_dist = heap[index];
         if(parent_dist <= child_dist) return;
